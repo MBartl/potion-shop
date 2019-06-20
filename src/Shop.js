@@ -1,14 +1,14 @@
 import React from 'react'
-import ShopTile from "./ShopTile"
+import PotionTile from "./PotionTile"
 
 const Shop = (props) => {
 
   const renderPotions = () => {
     return props.potions.map(potion => {
-      return ( 
-        <ShopTile potion={potion} addToInventory={props.addToInventory}>
+      return (
+        <PotionTile key={potion.id} potion={potion} addToInventory={props.addToInventory} className="card">
           <h4 className="potion-header">{potion.name}</h4>
-        </ShopTile>
+        </PotionTile>
       )
     })
   }
@@ -28,4 +28,3 @@ const Shop = (props) => {
 }
 
 export default Shop
-

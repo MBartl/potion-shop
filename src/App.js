@@ -52,13 +52,13 @@ class App extends React.Component {
       audio.play()
     } else {
       this.setState({
-        shake: true 
+        shake: true
       }, () => {
         const audio = new Audio("./wrong.wav")
-        audio.play()  
+        audio.play()
       })
     }
-    
+
   }
 
   sell = (potionID) => {
